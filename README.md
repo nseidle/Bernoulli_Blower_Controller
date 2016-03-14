@@ -9,7 +9,7 @@ The controller turns on the blower for 45 seconds then turns off. Any presses of
 
 ![Outlet wiring](https://raw.githubusercontent.com/nseidle/Bernoulli_Blower_Controller/master/images/Outlet-Wiring.jpg)
 
-Above you can see the outlet has been clipped on the right side (the small slot is the hot slot) to isolate the two outlets. The outlet shown on the left in the picture above is wired to the SSR and is switchable while the outlet on the right is energized at all times. This allows me to plug a wall adapter into the 'always on' outlet to power the controller and plug the blower into the switched outlet. I had two small wires running from the DC input side. These two wires terminate in a 2-pin JST connector that plugs into the main controller. 
+Above you can see the metal on the right side of the outlet (the small slot is the hot slot) has been clipped to isolate the two outlets. The outlet shown on the left in the picture above is wired to the SSR and is switchable while the outlet on the right is energized at all times. This allows me to plug a wall adapter into the 'always on' outlet to power the SAMD21 controller and plug the blower into the switched outlet. I had two small wires running from the DC input side. These two wires terminate in a 2-pin JST connector that plugs into the main controller. 
 
 The SSR is switched at 5V through an NPN transistor connected between 5V, SSR, and ground with a 330 base resistor. SAMD21 is only 3.3V and is not quite enough to forward bias the SSR. I used a 2N2222 but any NPN (2N3904) should work.
 
@@ -29,6 +29,7 @@ The red LED in the big arcade button has a 640 Ohm resistor (I think). I replace
 Parts List:
 -------------------
 
+High Voltage AC Bits:
 * [6' 18AWG Pigtail](http://www.homedepot.com/p/HDX-6-ft-16-3-SPT-3-Appliance-Cord-Gray-HD-588-547/100672804) - $7
 * [Power Strip with 3' Cord](http://www.homedepot.com/p/Belkin-6-Outlet-Power-Strip-F9P609-03-DP/100654575) (Cheapest way to get 3' a pig tail) - $4
 * [Metallic Wall Box - 2.2" Deep](http://www.homedepot.com/p/Steel-City-4-in-30-3-cu-in-Metallic-Square-Box-Case-of-25-521711234EW-25R/202592852) - $3
@@ -36,6 +37,7 @@ Parts List:
 * [Outlet](http://www.homedepot.com/p/Leviton-15-Amp-Duplex-Outlet-White-R52-05320-00W/202066670) - $1
 * [3/8" Cable Clamp](http://www.homedepot.com/p/3-8-in-Non-Metallic-NM-Twin-Screw-Cable-Clamp-Connectors-5-Pack-20511/100133208) - $1 
 
+Low Voltage DC Bits:
 * [SparkFun SAMD21 Mini Breakout](https://www.sparkfun.com/products/13664) - $20
 * [Micro USB Power Supply](https://www.sparkfun.com/products/12890) - $6
 * [SSR](https://www.sparkfun.com/products/13015) - $10
@@ -50,6 +52,7 @@ Repository Contents
 -------------------
 
 * **firmware** - Contains the firmware that runs on the controller
+* **images** - Pictures of the system
 
 License Information
 -------------------
